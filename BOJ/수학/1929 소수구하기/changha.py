@@ -5,7 +5,7 @@ def is_prime(x):
     if x == 1:
         return False
 
-    for i in range(2, x):
+    for i in range(2, int(x**0.5)+1): ## 연산 횟수를 크게 줄임 
         #나뉜다면 False 반환 
         if x % i == 0:
             return False
