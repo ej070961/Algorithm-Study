@@ -16,5 +16,5 @@ for i in range(m, n+1):
     if is_prime(i):
         arr.append(i)
 
-for v in arr:
+for v in arr:   
     print(v)
