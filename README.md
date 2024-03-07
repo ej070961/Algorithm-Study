@@ -33,4 +33,4 @@
 [커리큘럼 참고자료](https://dev-dain.tistory.com/155)
 
 ### 4. 개인 정리
-- 창하 : [알고리즘 기록](https://mirage-coriander-94a.notion.site/0b7f0770413e47db82cf770baac201be?pvs=4)
+- 창하 : [알고리즘 정리](https://mirage-coriander-94a.notion.site/0b7f0770413e47db82cf770baac201be?pvs=4)
