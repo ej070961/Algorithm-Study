@@ -32,6 +32,22 @@
 ### 3. 참고 자료 
 [커리큘럼 참고자료](https://dev-dain.tistory.com/155)
 
+### 4. 커리큘럼
+|주차|내용|
+|------|---|
+|Week 1|수학|
+|Week 2|자료구조|
+|Week 3|재귀, 정렬|
+|Week 4|DP|
+|Week 5|DFS/BFS|
+|Week 6|DFS/BFS 응용 최단경로 구하기|
+|Week 7|이분 탐색과 분할정복|
+|Week 8|그리디 알고리즘|
+|Week 9|완전탐색과 시뮬레이션|
+|Week 10|구현|
+|Week 11|문자열|
+|Week 12|투 포인터, 슬라이딩 윈도우|
+|Week 13|백트랙킹|
 ### 4. 개인 정리
 - 창하 : [알고리즘 정리](https://mirage-coriander-94a.notion.site/0b7f0770413e47db82cf770baac201be?pvs=4)
 - 인선 : [알고리즘 정리](https://www.notion.so/3dfe8552f04143acb1a8a0f794f21477?pvs=4)
