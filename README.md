@@ -34,3 +34,4 @@
 
 ### 4. 개인 정리
 - 창하 : [알고리즘 정리](https://mirage-coriander-94a.notion.site/0b7f0770413e47db82cf770baac201be?pvs=4)
+- 인선 : [알고리즘 정리](https://www.notion.so/2024-1-498faf6f84d14befa1dbdb0277b78966?pvs=4)
