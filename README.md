@@ -51,4 +51,4 @@
 ### 4. 개인 정리
 - 창하 : [알고리즘 정리](https://mirage-coriander-94a.notion.site/0b7f0770413e47db82cf770baac201be?pvs=4)
 - 인선 : [알고리즘 정리](https://www.notion.so/3dfe8552f04143acb1a8a0f794f21477?pvs=4)
-- 은지 : [알고리즘 정리](https://www.notion.so/3dfe8552f04143acb1a8a0f794f21477?pvs=4)
+- 은지 : [알고리즘 정리](https://www.notion.so/9732677813784e95a1e83d91b80e7576?v=8a301cf8733a45ffa5a95c5298865e3b&pvs=4)
