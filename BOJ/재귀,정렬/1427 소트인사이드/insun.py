@@ -45,4 +45,11 @@ N = sorted([int(x) for x in N], reverse=True)
 
 # 정렬된 리스트를 문자열로 변환하여 출력
 #print("정렬된 숫자 :", ''.join(map(str, N)))
-print(''.join(map(str, N)))
+print(''.join(map(str, N))) 
+
+# join은 어떻게 쓰는 걸까
+#'구분자'.join(반복 가능한 객체)
+#my_list = ['사과', '바나나', '체리']
+# result = ', '.join(my_list)
+# print(result)  # 출력: 사과, 바나나, 체리
+# join() 함수를 사용해 리스트 my_list의 각 요소 사이에 , (콤마와 공백)을 구분자로 삽입해 하나의 문자열로 결합
