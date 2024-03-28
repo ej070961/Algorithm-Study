@@ -5,7 +5,7 @@ n, m, v = list(map(int, input().split()))
 graph_dfs = [[] for _ in range(n+1)]
 graph_bfs = [[] for _ in range(n+1)]
 
-visited = [False for _ in range(n+1)] 
+visited_dfs = [False for _ in range(n+1)] 
 visited_bfs = [False for _ in range(n+1)] 
 
 ans_dfs = []
@@ -23,10 +23,10 @@ for i in range(n+1):
     graph_bfs[i].sort()
 
 def dfs(v):
-    visited[v] = True
+    visited_dfs[v] = True
     ans_dfs.append(v)
     for next in graph_dfs[v]:
-        if not visited[next]:
+        if not visited_dfs[next]:
             dfs(next)
 
 def bfs(v):
