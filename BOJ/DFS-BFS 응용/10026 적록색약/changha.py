@@ -24,29 +24,26 @@ def bfs(i, j, std):
             ny = y + dy[i]
             if nx < 0 or nx >= n or ny < 0 or ny >= n:
                 continue
-            if not visited[nx][ny] and graph[nx][ny] == std:
+            if not visited[nx][ny] and graph[nx][ny] in std:
                 visited[nx][ny] = True
                 q.append((nx, ny))
+    return 1
         
 
 for i in range(n):
     for j in range(n):
         if not visited[i][j] and graph[i][j] in standard:
-            bfs(i, j, graph[i][j])
-            count += 1
+            count += bfs(i, j, [graph[i][j]])
+            
 
 visited = [[False] * n for _ in range(n)]
-for i in range(n):
-    for j in range(n):
-        if graph[i][j] == 'G':
-            graph[i][j] = 'R'
-
 
 for i in range(n):
     for j in range(n):
         if visited[i][j] == False and graph[i][j] in standard:
-            bfs(i, j, graph[i][j])
-            count_blind += 1
+            if graph[i][j] == 'R' or graph[i][j] == 'G':
+                count_blind += bfs(i, j, ['R', 'G'])
+            if graph[i][j] == 'B':
+                count_blind += bfs(i, j, ['B'])
 
-        
 print(count, count_blind)
