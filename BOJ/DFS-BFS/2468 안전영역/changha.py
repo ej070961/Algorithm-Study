@@ -29,6 +29,7 @@ def bfs(x, y):
 for i in range(max_num+1): #비가 오지 않을 때도 고려 해야 됨, 따라서 0부터 시작 
     boundary = i
     tmp_cnt = 0
+    # 새로운 boundary일 때마다 visited 다시 초기화 해줌 
     global visited
     visited = [[False] * n for _ in range(n)]
     for j in range(n):
