@@ -1,43 +1,67 @@
 import sys
-sys.setrecursionlimit(1000000)
+from collections import deque
 
-N = int(sys.stdin.readline())
-grid = [list(sys.stdin.readline().rstrip()) for _ in range(N)]
-visited = [[False] * N for _ in range(N)]
+n = int(sys.stdin.readline())
 
-d = [(0,1), (0, -1), (1,0), (-1,0)]
+area = [] 
 
-def dfs(x, y):
+for _ in range(n):
+    area.append(list(sys.stdin.readline().rstrip()))
 
+global visited
+
+def bfs(color, x, y):
+    queue = deque([(x,y)])
     visited[x][y] = True
-    color = grid[x][y]
+    while queue:
+        a, b = queue.popleft()
+     
+        #상하좌우 체크 
+        for ta, tb in ((-1, 0), (1,0), (0,-1), (0,1)):
+            ta = ta+a
+            tb = tb+b
 
-    for dx, dy in d:
-        X, Y = x + dx, y + dy
-        if (0 <= X < N) and (0 <= Y < N):
-            if not visited[X][Y] and grid[X][Y] == color:
-                dfs(X,Y)
-    return 
+            #범위체크 
+            if ta < 0 or ta >= n or tb < 0 or tb >= n:
+                continue
 
-cnt, cnt2 = 0, 0
+            if not visited[ta][tb] and area[ta][tb] in color:
+                visited[a][b] = True
+                queue.append((ta, tb))
 
-for x in range(N):
-    for y in range(N):
-        if not visited[x][y]:
-            dfs(x,y)
-            cnt += 1
 
-for x in range(N):
-    for y in range(N):
-        if grid[x][y] == 'G':
-            grid[x][y] = 'R'
 
-visited = [[False] * N for _ in range(N)]
+#rgb 구역 계산
+visited = [[False]*n for _ in range(n)]
 
-for x in range(N):
-    for y in range(N):
-        if not visited[x][y]:
-            dfs(x,y)
-            cnt2 += 1
+count1 = 0
+for i in range(n):
+    for j in range(n):
+        if not visited[i][j]:
+            if area[i][j] == 'R' :
+                count1+= 1
+                bfs(['R'], i, j)
+            elif area[i][j] == 'G':
+                count1+= 1
+                bfs(['G'], i, j)
+            elif area[i][j] == 'B':
+                count1 += 1
+                bfs( ['B'], i, j)
 
-print(cnt, cnt2)
+
+visited = [[False]*n for _ in range(n)]
+
+#적록색약 구역 계산
+count2 = 0
+for i in range(n):
+    for j in range(n):
+        if not visited[i][j]:
+            if area[i][j] == 'G' or area[i][j] == 'R':
+                count2 += 1
+                bfs(['R', 'G'] , i, j)
+            elif area[i][j] == 'B':
+                count2 += 1
+                bfs(['B'], i, j)
+
+print(count1, count2)
+
