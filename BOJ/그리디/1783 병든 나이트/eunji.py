@@ -8,7 +8,7 @@ elif n==2:
     if 1<=m<=6:
         result = (m+1)//2
     elif m>=7:
-        result =1
+        result = 4
 elif n>=3:
     if 1<=m<=6:
         result = min(m,4)
