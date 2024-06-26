@@ -18,10 +18,11 @@ def init():
     for i in range(n):
         for j in range(m):
             # 벽이 아니고, 빈칸이 아니면 
+            # cctv번호, cctv y좌표, cctv x좌표 저장
             if space[i][j] != 6 and space[i][j] != 0:
                 obj.append((space[i][j], i, j))
 
-            # cctv번호, cctv y좌표, cctv x좌표 저장
+      
             if space[i][j] == 0:
                     answer += 1
 
